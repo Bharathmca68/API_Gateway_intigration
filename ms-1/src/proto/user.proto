@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package user;
+
+service UsersService {
+  rpc signup (AuthCredDto) returns (MessageResponse) {}
+}
+
+message AuthCredDto {
+  string username = 1;
+  string password = 2;
+  string email = 3;
+}
+
+message MessageResponse {
+  string message = 1;
+}

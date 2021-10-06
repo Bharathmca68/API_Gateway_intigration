@@ -1,0 +1,5 @@
+/api-gateway/node_modules
+/api-gateway/dist
+
+/ms-1/node_modules
+/ms-1/dist
