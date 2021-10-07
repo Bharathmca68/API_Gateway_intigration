@@ -1,0 +1,36 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type MessageDef {
+  message: String!
+}
+
+type allUser {
+  username: String!
+  email: String!
+}
+
+type Usertype {
+  User: [allUser!]
+}
+
+type Query {
+  sayHello: String!
+  fetchUser(input: FectUserDTO!): Usertype!
+}
+
+input FectUserDTO {
+  page: Float!
+  size: Float!
+}
+
+type Mutation {
+  signup(input: AuthCredDto!): MessageDef!
+}
+
+input AuthCredDto {
+  username: String!
+  password: String!
+  email: String!
+}

@@ -4,7 +4,6 @@ package user;
 
 service UsersService {
   rpc signup (AuthCredDto) returns (MessageResponse) {}
-  rpc fetchUser(FectUserDTO) returns (User) {}
 }
 
 message AuthCredDto {
@@ -15,18 +14,4 @@ message AuthCredDto {
 
 message MessageResponse {
   string message = 1;
-}
-
-message FectUserDTO {
-  int32 page = 1;
-  int32 size = 2;
-}
-
-message allUser {
-  string email = 1;
-  string username =2;
-}
-
-message User{
-    repeated allUser User = 1;
 }

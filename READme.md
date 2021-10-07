@@ -77,3 +77,19 @@ client connection (API_Gateway)
     }
 
 > > now start the server and play with microservice :)
+
+GraphQL API_Gateway
+
+Packages needed:
+
+> > npm i --save @nestjs/microservices
+> > npm i class-validator --save
+> > npm i class-transformer --save
+> > npm i --save @grpc/grpc-js @grpc/proto-loader
+> > npm i @nestjs/graphql@9.0.2 --save
+> > npm i graphql@15.5.1 --save
+> > npm i apollo-server-express@3.3.0 --save
+> > npm install @apollo/gateway --save
+
+> > copy past the gRPC connection options and proto file
+> > Remaining steps same as REST_API

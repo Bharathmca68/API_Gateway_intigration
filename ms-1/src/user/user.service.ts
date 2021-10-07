@@ -1,7 +1,7 @@
 import { ConflictException, Injectable, InternalServerErrorException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
-import { AuthCredDto } from './dtos/user.dto';
+import { AuthCredDto, FectUserDTO } from './dtos/user.dto';
 import { User } from './user.entity';
 import * as bcrypt from 'bcrypt'
 
@@ -37,12 +37,14 @@ export class UserService {
 
     }
 
-    async GetAllUsers(page, size) {
+    async GetAllUsers(fectUserDTO: FectUserDTO) {
 
-        const user = await this.usersRepository.find({
+        const { page, size } = fectUserDTO
+
+        const users = await this.usersRepository.find({
             take: size,
             skip: size * (page - 1)
         })
-        return user
+        return users
     }
 }

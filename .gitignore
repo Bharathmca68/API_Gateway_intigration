@@ -3,3 +3,7 @@
 
 /ms-1/node_modules
 /ms-1/dist
+
+
+/api-graph-ql/node_modules
+/api-graph-ql/dist
